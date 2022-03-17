@@ -1,8 +1,9 @@
 const dino = document.querySelector('.dino');
 const background = document.querySelector('.background');
 let isJumping = false;
- //dinnor jump//
+let isGameOver = false;
  let position = 0;
+
 function handlekeyup(event){
     if(event.keyCode === 32){
         if(!isJumping){
@@ -40,21 +41,21 @@ function createCactus(){
     const cactus = document.createElement('div');
     let cactusPosition = 1000;
     let randomTime = Math.random() * 6000;
+    if(isGameOver) return;
 
     cactus.classList.add('cactus');
-    cactus.style.left = 1000 + 'px';
     background.appendChild(cactus);
+    cactus.style.left = 1000 + 'px';
 
     let leftInterval = setInterval(()=>{
-        if(cactusPosition <- 60){
+        if(cactusPosition < -60){
             clearInterval(leftInterval);
             background.removeChild(cactus);
         }
-        else if(cactusPosition > 0 && cactusPosition < 60) {
+        else if(cactusPosition > 0 && cactusPosition < 60 && position < 60) {
             //Game Over//
             clearInterval(leftInterval);
-            document.body.innerHTML = '<h1 class = "game-over">Fim de Jogo</h1>';
-        } 
+            document.body.innerHTML = '<h1 class="game-over">Fim de jogo</h1>';        } 
         
         
         else{
