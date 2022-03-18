@@ -1,10 +1,8 @@
-body{
-    background: #f2f9fa;
-}
+
 .dino{
-    width: 60px;
-    height: 60px;
-    background-image: url(img/mario-e-yoshi.png);
+    width: 70px;
+    height: 70px;
+    background-image: url(img/mario-e-yoshi.jpg);
     position: absolute;
     bottom: 0;
 }
@@ -13,7 +11,7 @@ body{
     width: 60px;
     height: 60px;
     bottom: 0;
-    background-image:url(img/cactus.png);
+    background-image:url(img/carnivora.jpg);
 
 }
 .game-over{
